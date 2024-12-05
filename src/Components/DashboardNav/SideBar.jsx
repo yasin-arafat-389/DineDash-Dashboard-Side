@@ -68,9 +68,11 @@ const SideBar = () => {
                 className={({ isActive }) =>
                   isActive ? "active" : "text-lg rounded-lg hover:bg-blue-100"
                 }
-                to="/admin/dashboard/partner-requests"
+                to="/admin/dashboard/manage-vendors"
               >
-                <div className="flex p-3 font-bold">Vendor Requests</div>
+                <div className="flex items-center p-3 font-bold">
+                  Manage Vendors
+                </div>
               </NavLink>
             )}
 

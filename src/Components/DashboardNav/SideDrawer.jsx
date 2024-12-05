@@ -5,7 +5,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { FaPowerOff } from "react-icons/fa6";
 import { authContext } from "../../Contexts/AuthContext";
 import { MdDashboard, MdReviews } from "react-icons/md";
-import { IoPersonAdd } from "react-icons/io5";
 import { IoIosNotifications } from "react-icons/io";
 import { IoMdAddCircle } from "react-icons/io";
 import useRole from "../../Hooks/useRole";
@@ -84,15 +83,10 @@ const SideDrawer = () => {
                   className={({ isActive }) =>
                     isActive ? "active" : "text-lg rounded-lg hover:bg-blue-100"
                   }
-                  to="/admin/dashboard/partner-requests"
+                  to="/admin/dashboard/manage-vendors"
                   onClick={closeDrawer}
                 >
-                  <div className="flex p-3 font-bold">
-                    <ListItemPrefix>
-                      <IoPersonAdd fontSize={"20"} />
-                    </ListItemPrefix>
-                    Vendor Requests
-                  </div>
+                  <div className="flex p-3 font-bold">Manage Vendors</div>
                 </NavLink>
               )}
 
