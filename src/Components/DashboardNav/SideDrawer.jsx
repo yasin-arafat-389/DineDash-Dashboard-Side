@@ -102,6 +102,18 @@ const SideDrawer = () => {
                 </NavLink>
               )}
 
+              {role === "admin" && (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "active" : "text-lg rounded-lg hover:bg-blue-100"
+                  }
+                  to="/admin/dashboard/manage-subscribers"
+                  onClick={closeDrawer}
+                >
+                  <div className="flex p-3 font-bold">Manage Subscribers</div>
+                </NavLink>
+              )}
+
               {/* Restaurant handlers routes */}
               {role === "restaurant-handler" && (
                 <NavLink
@@ -166,7 +178,7 @@ const SideDrawer = () => {
                     <ListItemPrefix>
                       <BiSolidOffer fontSize={"20"} />
                     </ListItemPrefix>
-                    Create Offer
+                    Manage Coupon
                   </div>
                 </NavLink>
               )}

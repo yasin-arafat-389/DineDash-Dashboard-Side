@@ -64,6 +64,22 @@ const Login = () => {
       });
   };
 
+  const handleAdminCredentials = () => {
+    // Set demo credentials
+    setFormData({
+      email: "admin@gmail.com",
+      password: "Arafat*",
+    });
+  };
+
+  const handleVendorCredentials = () => {
+    // Set demo credentials
+    setFormData({
+      email: "burgerking@gmail.com",
+      password: "Arafat*",
+    });
+  };
+
   if (user) {
     return <Navigate to={`/dashboard/overview`} />;
   }
@@ -93,6 +109,22 @@ const Login = () => {
               <p className="mt-3 text-xl text-center text-gray-600 dark:text-gray-200">
                 Login to your Dashboard
               </p>
+
+              <div className="my-5 flex gap-5 justify-center">
+                <div
+                  onClick={handleAdminCredentials}
+                  className="bg-blue-600 text-white p-2 rounded-lg text-center shadow-lg cursor-pointer"
+                >
+                  Admin Credentials
+                </div>
+
+                <div
+                  onClick={handleVendorCredentials}
+                  className="bg-blue-600 text-white p-2 rounded-lg text-center shadow-lg cursor-pointer"
+                >
+                  Vendor Credentials
+                </div>
+              </div>
 
               <form className="mt-5" onSubmit={handleLogin}>
                 {/* Email */}
@@ -199,7 +231,7 @@ const Login = () => {
                 </span>
 
                 <Link
-                  to="https://dine-dash-dashboard-side.web.app/"
+                  to="/"
                   className="mx-2 text-sm font-bold text-blue-500 dark:text-blue-400 hover:underline"
                 >
                   Register your restaurant now

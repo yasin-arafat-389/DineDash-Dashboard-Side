@@ -7,7 +7,7 @@ const useTotalRider = () => {
   let { data = [], isLoading: isTotalRidersLoading } = useQuery({
     queryKey: ["totalRiders"],
     queryFn: async () => {
-      let res = await axios.get(`/all-riders`).then();
+      let res = await axios.get(`/subscribers`).then();
       return res.data;
     },
   });

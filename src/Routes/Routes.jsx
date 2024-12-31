@@ -16,6 +16,8 @@ import CreateOffer from "../Pages/PartnerPages/CreateOffer/CreateOffer";
 import ManageCategories from "../Pages/AdminPages/ManageCategories/ManageCategories";
 import ManageReviews from "../Pages/PartnerPages/ManageReviews/ManageReviews";
 import ManageVendor from "../Pages/AdminPages/ManageVendor/ManageVendor";
+import Profile from "../Pages/Profile/Profile";
+import ManageSubscribers from "../Pages/AdminPages/ManageSubscribers/ManageSubscribers";
 
 const router = createBrowserRouter([
   {
@@ -47,12 +49,28 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/dashboard/my-profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
 
       {
         path: "/admin/dashboard/manage-vendors",
         element: (
           <AdminRoute>
             <ManageVendor />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/admin/dashboard/manage-subscribers",
+        element: (
+          <AdminRoute>
+            <ManageSubscribers />
           </AdminRoute>
         ),
       },

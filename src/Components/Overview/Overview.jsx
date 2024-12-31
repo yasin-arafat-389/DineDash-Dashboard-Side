@@ -15,6 +15,7 @@ import useTotalEarned from "../../Hooks/useTotalEarned";
 import FoodsWeOffer from "../FoodsWeOffer/FoodsWeOffer";
 import useDeliveryArea from "../../Hooks/useDeliveryArea";
 import RiderActivity from "../RiderActivity/RiderActivity";
+import { LuMessageSquarePlus } from "react-icons/lu";
 
 const Overview = () => {
   let [role] = useRole();
@@ -73,7 +74,7 @@ const Overview = () => {
           <div className="flex items-center bg-gray-200 border rounded-sm overflow-hidden shadow">
             <div className="p-4 bg-green-400">
               {role === "admin" && (
-                <MdDeliveryDining className="text-white text-[60px]" />
+                <LuMessageSquarePlus className="text-white text-[60px]" />
               )}
               {role === "restaurant-handler" && (
                 <MdDeliveryDining className="text-white text-[60px]" />
@@ -84,7 +85,7 @@ const Overview = () => {
             </div>
             <div className="px-4 text-gray-700">
               <h3 className="text-sm tracking-wider">
-                {role === "admin" && "Total Riders"}
+                {role === "admin" && "Total Subscribers"}
                 {role === "restaurant-handler" && "Total Orders Delivered"}
                 {role === "rider" && "Total Delivered"}
               </h3>

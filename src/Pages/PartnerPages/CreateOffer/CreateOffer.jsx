@@ -152,7 +152,7 @@ const CreateOffer = () => {
         <form onSubmit={handleCreateOffer} className="text-[#0866ff]">
           <fieldset className="border-4 border-dotted border-[#0866ff] p-5">
             <legend className="px-2 italic -mx-2 text-xl font-bold">
-              Create an offer
+              Create a coupon
             </legend>
 
             <label className="text-lg after:text-red-400">Coupon Code</label>
@@ -217,7 +217,7 @@ const CreateOffer = () => {
                   Creating Offer
                 </div>
               ) : (
-                "Create Offer"
+                "Create Coupon"
               )}
             </button>
           </fieldset>

@@ -47,6 +47,7 @@ const SideBar = () => {
             />
             <h1 className="text-lg font-bold">{user?.displayName}</h1>
           </div>
+
           <List>
             <NavLink
               className={({ isActive }) =>
@@ -85,6 +86,19 @@ const SideBar = () => {
               >
                 <div className="flex items-center p-3 font-bold">
                   Manage Categories
+                </div>
+              </NavLink>
+            )}
+
+            {role === "admin" && (
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "active" : "text-lg rounded-lg hover:bg-blue-100"
+                }
+                to="/admin/dashboard/manage-subscribers"
+              >
+                <div className="flex items-center p-3 font-bold">
+                  Manage Subscribers
                 </div>
               </NavLink>
             )}
@@ -149,7 +163,7 @@ const SideBar = () => {
                   <ListItemPrefix>
                     <BiSolidOffer fontSize={"22"} />
                   </ListItemPrefix>
-                  Create Offer
+                  Manage Coupon
                 </div>
               </NavLink>
             )}
